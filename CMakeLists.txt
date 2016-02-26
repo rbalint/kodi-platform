@@ -57,14 +57,14 @@ IF(NOT WIN32)
                                  ${CMAKE_INSTALL_PREFIX}/include)
 
   install(FILES ${CMAKE_BINARY_DIR}/kodiplatform.pc
-          DESTINATION ${CMAKE_INSTALL_LIBDIR_NOARCH}/pkgconfig)
+          DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
 ENDIF(NOT WIN32)
 
 # config mode
 configure_file (kodiplatform-config.cmake.in
                 kodiplatform-config.cmake @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/kodiplatform-config.cmake
-        DESTINATION ${CMAKE_INSTALL_LIBDIR_NOARCH}/kodiplatform)
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/kodiplatform)
 
 # Quell warnings with in-tree builds
 set(KODI_BUILD_DIR ${KODI_BUILD_DIR})
